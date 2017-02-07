@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Germs Everywhere</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js/css/theme/schauderhaft.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Germs Everywhere</h1><div class="preamble"><div class="paragraph"><p>Ein Vortrag über persönliche Hygiene, das Leben, das Universum und den Ganzen Rest</p></div></div></section>
+<section id="slide-jens-schauder"><h2>Jens Schauder</h2><div class="paragraph"><p>Java Entwickler</p></div>
+<div class="paragraph"><p>Clean Code Fanatic</p></div>
+<div class="paragraph"><p>JUG Organizer
+    
+    <img src="images/jug_final_small.png" style="vertical-align: middle; border:none;" width="150"/>
+    </p></div>
+<div class="paragraph"><p>Vater, Spieler, Läufer, Boulderer</p></div>
+<span>
+<img src="images/pivotal-spring-logo.png" style="vertical-align: middle; border:none;" width="200"/>
++
+<img src="images/spring-data-logo.png"  style="vertical-align: middle; border:none;" width="60"/>
+</span></section>
+<section><section id="slide-eine-kleine-reise-ins-mittelalter" data-background-image="./images/warwick-castle-england-4-1221713.jpg" data-background-size="cover"><h2>Eine kleine Reise ins Mittelalter</h2></section><section id="slide-alle-aufstehen-bitte"><h2>Alle aufstehen bitte!</h2></section><section id="slide-alter-teilbar-durch-2"><h2>Alter teilbar durch 2?</h2><div class="paragraph"><p>Bitte setzen.</p></div></section><section id="slide-schaut-euch-um"><h2>Schaut euch um.</h2><div class="paragraph"><p>Alle die jetzt sitzen wären tot!</p></div>
+<aside class="notes"><div class="paragraph"><p>Vermutlich noch wesentlich mehr</p></div>
+<div class="paragraph"><p>bei der eigenen Geburt gestorben</p></div>
+<div class="paragraph"><p>in den ersten Lebensjahren</p></div>
+<div class="paragraph"><p>oder der Geburt eines Kindes</p></div></aside></section></section>
+<section><section id="slide-hygiene-im-mittelalter"><h2>Hygiene im Mittelalter</h2></section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>die Operationsschürzen der Chirurgen [wurden] praktisch nie gewaschen</p></div></blockquote><div class="attribution">&#8212; https://de.wikipedia.org/wiki/Hygiene</div></div></section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>11% der Geburten verliefen tötlich für die Mütter &#8230;&#8203; weil die Ärzte nach eine Leichensektion eine Geburt betreuten,
+ohne sich die Hände zu waschen</p></div></blockquote><div class="attribution">&#8212; https://de.wikipedia.org/wiki/Hygiene</div></div></section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>Wunden von verschiedenen Patienten [wurden] nacheinander mit demselben Schwamm gereinigt</p></div></blockquote><div class="attribution">&#8212; https://de.wikipedia.org/wiki/Hygiene</div></div></section><section id="slide-fkalien-wurden-auf-die-strae-gekippt"><h2>Fäkalien wurden auf die Straße gekippt</h2><aside class="notes"><div class="paragraph"><p>Brauereien oberhalb der Stadt</p></div>
+<div class="paragraph"><p>Es sei denn es gab weiter oben eine weitere Siedlung &#8230;&#8203;</p></div></aside></section></section>
+<section><section id="slide-wir-leben-im-it-mittelalter"><h2>Wir leben im IT Mittelalter</h2></section><section><div class="paragraph"><p>Code sieht oft aus als wäre er aus einem Nachttopf auf die Straße gekippt worden.</p></div></section><section><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">getNowDate().getTime()
+
+public static Date getNowDate() {
+    final Calendar cal =
+        new GregorianCalendar();
+    cal.setTime(new Date());
+    return cal.getTime();
+}</code></pre></div></div></section><section id="slide-dies-tut-das-gleiche"><h2>Dies tut das Gleiche</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">    System.currentTimeMillis()</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Oder benutzt ihr den Rechner als Heizung?</p></div>
+<div class="paragraph"><p>Unwissenheit?</p></div></aside></section><section id="slide-manager-definieren-metriken"><h2>Manager definieren Metriken</h2></section><section><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">    Person p = new Person();
+    p.setFirstName(rs.getString(1));
+    p.setLastName(rs.getString(2));</code></pre></div></div></section><section id="slide-but-wait-there-is-more"><h2>But Wait! There is More!</h2></section><section><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">    p.setStreat(rs.getString(2 + 1));
+    p.setCity(rs.getString(2 + 2));
+    p.setZip(rs.getString(2 + 2 + 1));</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Es werden Metriken eingehalgen</p></div>
+<div class="paragraph"><p>ohne das eigentliche Problem zu lösen.</p></div></aside></section><section id="slide-projekte-sterben-an-den-folgen"><h2>Projekte sterben an den Folgen</h2></section><section id="slide-und-nicht-nur-projekte"><h2>Und nicht nur Projekte</h2></section><section id="slide-therac-25"><h2>Therac-25</h2><div class="paragraph"><p>Gerät zur Strahlenbehandlung &#8594; wenigstens 3 Tote</p></div>
+<aside class="notes"><div class="paragraph"><p>Einzelner Programmierer
+Keine Tests
+Kein Review</p></div></aside></section></section>
+<section><section id="slide-warum-tun-leute-so-etwas"><h2>Warum tun Leute so etwas?</h2></section><section id="slide-mangel-an-verantwortung"><h2>Mangel an Verantwortung</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">    private static final int four = 5;</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Konstante ausgelagert ohne zu wissen, was sie bedeutet.</p></div>
+<div class="paragraph"><p>Aber derjenige, der es auf 5 geändert hat hatte Informationen, die uns jetzt wieder fehlen.</p></div></aside></section><section id="slide-unwissenheit"><h2>Unwissenheit</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">List&lt;A&gt; as = getAs();
+if (as != null &amp;&amp; !as.isEmpty(){
+  for(A a in as){
+  ...
+  }
+}</code></pre></div></div></section><section><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">List&lt;A&gt; getAs(){
+  ...
+  if (as.size() &gt; 0)
+      return as;
+  else
+      return null;
+}</code></pre></div></div></section><section id="slide-du-kommst-hier-net-rein" data-background-image="./images/stop.jpg" data-background-size="cover"><h2>Du kommst hier net rein!</h2>
+<aside class="notes"><div class="paragraph"><p>Akzeptiert keinen Code, den ihr nicht versteht.</p></div></aside></section><section id="slide-angst"><h2>Angst!</h2><div class="quoteblock"><blockquote><div class="paragraph"><p>Ich hatte Angst!</p></div></blockquote><div class="attribution">&#8212; Anonymer Entwickler auf die Frage, warum er eine Methode nicht refactored hat, bevor er noch ein Feature eingebaut hat</div></div></section></section>
+<section><section id="slide-tests-to-the-rescue"><h2>Tests to the Rescue!</h2></section><section id="slide-aufgabe-fr-morgen"><h2>Aufgabe für Morgen</h2><div class="paragraph"><p>Schreibt einen Test!</p></div>
+<aside class="notes"><div class="paragraph"><p>Und übermorgen</p></div>
+<div class="paragraph"><p>und Montag</p></div></aside></section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>Das ist untestbarer Dreck!</p></div></blockquote><div class="attribution">&#8212; Der Speaker beim versuch 3rd Party Code zu testen</div></div></section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>Jedes Mal wenn ich den Code ändere, muss ich meine Tests anfassen!</p></div></blockquote><div class="attribution">&#8212; Kommentar zu den ersten Tests des Speakers</div></div></section><section data-background-image="./images/legacy-code.jpg" data-background-size="contain"></section><section id="slide-gute-tests-zu-schreiben-ist-schwer"><h2>Gute Tests zu schreiben ist schwer</h2><aside class="notes"><div class="paragraph"><p>Nicht aufgeben, sondern lernen</p></div>
+<div class="paragraph"><p>Ja es wird Zeit und Geld kosten</p></div>
+<div class="paragraph"><p>Es lohnt sich, ich habe es ausprobiert</p></div>
+<div class="paragraph"><p>hilfreich gut bezahlte Jobs zu bekommen, die Spaß machen.</p></div>
+<div class="paragraph"><p>Und Einladungen zu DevCamps</p></div></aside></section></section>
+<section><section><div class="quoteblock"><blockquote><div class="paragraph"><p>Ist Clean Code in der Praxis überhaupt möglich?</p></div></blockquote><div class="attribution">&#8212; Frage, die dem Speaker im Interview gestellt wurde</div></div><aside class="notes"><div class="paragraph"><p>Werdet ihr für funktionierende Software bezahlt?</p></div>
+<div class="paragraph"><p>Wenn ja ist Clean Code alternativlos</p></div>
+<div class="paragraph"><p>Aber vielleicht werdet ihr ja auch für Zeit vor dem Monitor bezahlt.</p></div></aside></section><section id="slide-der-fisch-stinkt-vom-kopf-aus" data-background-image="./images/dead-fish-1381829-1920x1440.jpg" data-background-size="cover"><h2>Der Fisch stinkt vom Kopf aus</h2>
+<aside class="notes"><div class="paragraph"><p>Manager definieren</p></div>
+<div class="paragraph"><p>was sie erreichen wollen</p></div>
+<div class="paragraph"><p>Welche Rahmenbedingune notwendig sind</p></div>
+<div class="paragraph"><p>Stellen dem Team das zur Verfügung was sie brauchen</p></div>
+<div class="paragraph"><p>Zeit</p></div>
+<div class="paragraph"><p>Werkzeuge</p></div>
+<div class="paragraph"><p>Ausbildung</p></div></aside></section><section data-background-image="./images/management-30.jpg" data-background-size="cover"></section></section>
+<section><section id="slide-es-bleibt-eure-aufgabe"><h2>Es bleibt eure Aufgabe!</h2><aside class="notes"><div class="paragraph"><p>Wie soll ich das schaffen?</p></div></aside></section><section id="slide-hebt-eure-rechte-hand-so-hoch-ihr-knnt"><h2>Hebt eure rechte Hand so hoch ihr könnt!</h2></section><section id="slide-noch-ein-bischen-hher"><h2>Noch ein bischen höher!</h2></section><section id="slide-es-geht-immer-noch-mehr"><h2>Es geht immer noch mehr!</h2><aside class="notes"><div class="paragraph"><p>love it</p></div>
+<div class="paragraph"><p>change it</p></div>
+<div class="paragraph"><p>leave it</p></div></aside></section><section data-background-image="./images/living-with-a-seal.jpg" data-background-size="contain">
+<aside class="notes"><div class="paragraph"><p>Entweder ihr helft die Softwareentwicklung weiter zu entwickeln</p></div>
+<div class="paragraph"><p>Oder ihr beobachtet, wohin sie sich entwickelt</p></div></aside></section></section>
+<section><div class="quoteblock"><blockquote><div class="paragraph"><p>Be the change that you wish to see in the world.</p></div></blockquote><div class="attribution">&#8212; Mahatma Gandhi</div></div>
+<aside class="notes"><div class="paragraph"><p>Wenn es Fragen gibt sprecht mich an, oder ladet mich zu eurer Session ein</p></div>
+<div class="paragraph"><p>Clean Code und Test im Datenbank Umfeld</p></div>
+<div class="paragraph"><p>Viel Spaß bei eurem Bar Camp</p></div></aside></section>
+<section id="slide-quellenangaben"><h2>Quellenangaben</h2><div class="paragraph"><p><a href="http://www.freeimages.com/photo/warwick-castle-england-4-1221713">Warwick Castle: freeimages/Kevin McGachy</a></p></div>
+<div class="paragraph"><p><a href="http://www.freeimages.com/photo/stop-1311579">Stop freeimages/Daniel Battison</a></p></div>
+<div class="paragraph"><p><a href="http://www.freeimages.com/photo/dead-fish-1381829">Dead Fish freeimages/Alexander Rist</a></p></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'schauderhaft',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
